@@ -40,20 +40,136 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
+   <section class="hero" style="
+  position: relative;
+  background-image: url('images/landingPage/pic4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+">
+  <!-- ชั้นโปร่งแสงทับภาพ -->
+  <div style="
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* ปรับความเข้มได้ เช่น 0.2–0.6 */
+  "></div>
+  <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">BanaWare</h1>
             <p class="hero-subtitle">ภาชนะอาหารธรรมชาติจากกาบกล้วย</p>
-            <p class="hero-description">ทดแทนโฟมและพลาสติก ด้วยภาชนะจากกาบกล้วยที่ย่อยสลายได้ 100%<br>ใช้แล้วทิ้งได้อย่างไร้กังวล เพื่อโลกที่ยั่งยืน</p>
+            <p class="hero-description">
+                <strong style="font-size: 1.3em; color: #f4a460; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                    "Float Green Soul, Win Love Goal"
+                </strong><br><br>
+                ทดแทนโฟมและพลาสติก ด้วยภาชนะจากกาบกล้วยที่ย่อยสลายได้ 100%<br>
+                ใช้แล้วทิ้งได้อย่างไร้กังวล เพื่อโลกที่ยั่งยืน
+            </p>
             <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary">เรียนรู้เพิ่มเติม</a>
+                <a href="#product-summary" class="btn btn-primary">ดูรายละเอียดผลิตภัณฑ์</a>
                 <a href="#npd" class="btn btn-secondary">New Product Cycle</a>
             </div>
         </div>
         <div class="scroll-indicator">
             <span>เลื่อนลงเพื่อดูเพิ่มเติม</span>
             <div class="scroll-arrow">↓</div>
+        </div>
+</section>
+        
+    </section>
+
+    <!-- Product Summary Section -->
+    <section id="product-summary" class="section product-summary-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">สรุปผลิตภัณฑ์ BanaWare</h2>
+                <div class="title-underline"></div>
+                <p class="section-description" style="font-size: 1.3em; color: #2d5016; font-weight: 600; margin-top: 1rem;">
+                    "Float Green Soul, Win Love Goal"
+                </p>
+            </div>
+
+            <!-- Product Images Gallery -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
+                <div style="text-align: center;">
+                    <img src="images/landingPage/pic1.jpeg" alt="BanaWare Product 1" style="width: 100%; max-width: 400px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #6c757d;">ภาชนะจากกาบกล้วย - จาน ชาม</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="images/product/production-process.jpg" alt="BanaWare Product 2" style="width: 100%; max-width: 400px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #6c757d;">กระบวนการผลิต</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="images/landingPage/pic2.png" alt="BanaWare Product 3" style="width: 100%; max-width: 400px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #6c757d;">ผลิตภัณฑ์สำเร็จ</p>
+                </div>
+            </div>
+
+            <!-- Pricing Section -->
+            <div style="background: white; border-radius: 15px; padding: 2.5rem; margin: 3rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                <h3 style="text-align: center; color: #2d5016; font-size: 2rem; margin-bottom: 2rem;">📊 ราคาผลิตภัณฑ์</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <!-- B2C Pricing -->
+                    <div style="background: linear-gradient(135deg, #2d5016 0%, #6b8e23 100%); color: white; border-radius: 12px; padding: 2rem; text-align: center;">
+                        <div style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 0.5rem;">💼 B2C (ขายปลีก)</div>
+                        <div style="font-size: 3rem; font-weight: bold; margin: 1rem 0;">10 ฿</div>
+                        <div style="font-size: 1rem; opacity: 0.9;">ต่อชิ้น</div>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                            <p style="font-size: 0.95rem; line-height: 1.6;">
+                                ✓ เหมาะสำหรับร้านอาหาร<br>
+                                ✓ งานเลี้ยง Event<br>
+                                ✓ ผู้บริโภคทั่วไป
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- B2B Pricing -->
+                    <div style="background: linear-gradient(135deg, #6b8e23 0%, #8ba446 100%); color: white; border-radius: 12px; padding: 2rem; text-align: center;">
+                        <div style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 0.5rem;">🏢 B2B (ขายส่ง)</div>
+                        <div style="font-size: 3rem; font-weight: bold; margin: 1rem 0;">8 ฿</div>
+                        <div style="font-size: 1rem; opacity: 0.9;">ต่อชิ้น (สั่งซื้อขั้นต่ำ 1,000 ชิ้น)</div>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                            <p style="font-size: 0.95rem; line-height: 1.6;">
+                                ✓ โรงแรม ร้านอาหาร<br>
+                                ✓ Catering Service<br>
+                                ✓ ซื้อเป็นจำนวนมาก
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Cost Summary -->
+                    <div style="background: linear-gradient(135deg, #f4a460 0%, #daa520 100%); color: white; border-radius: 12px; padding: 2rem; text-align: center;">
+                        <div style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 0.5rem;">💰 ต้นทุนผลิต</div>
+                        <div style="font-size: 3rem; font-weight: bold; margin: 1rem 0;">6.50 ฿</div>
+                        <div style="font-size: 1rem; opacity: 0.9;">ต่อชิ้น</div>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                            <p style="font-size: 0.95rem; line-height: 1.6;">
+                                ✓ กำไรขั้นต้น 27.8%<br>
+                                ✓ ROI 120% ต่อปี<br>
+                                ✓ คืนทุน 10-12 เดือน
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Values -->
+            <div style="background: linear-gradient(135deg, #2d5016 0%, #6b8e23 100%); border-radius: 15px; padding: 3rem; margin: 3rem 0; color: white;">
+                <h3 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">🌟 คุณค่าหลักของ BanaWare</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
+                    <div>
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🌊</div>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Float Green Soul</h4>
+                        <p style="opacity: 0.9; line-height: 1.6;">ลอยไปกับจิตวิญญาณสีเขียว ทุกผลิตภัณฑ์สะท้อนความห่วงใยต่อธรรมชาติ ย่อยสลายได้ 100%</p>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">❤️</div>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Win Love Goal</h4>
+                        <p style="opacity: 0.9; line-height: 1.6;">ชนะด้วยความรัก ส่งมอบความรักต่อโลกและสิ่งแวดล้อม สร้างอนาคตที่ยั่งยืนไปด้วยกัน</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -121,46 +237,6 @@
         </div>
     </section>
 
-    <!-- Product Showcase -->
-    <section class="section product-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">ผลิตภัณฑ์ BanaWare</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="product-badge">ขายดี</div>
-                        <div class="product-placeholder">�️</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>จานและชาม</h3>
-                        <p>จานและชามหลากหลายขนาด เหมาะสำหรับเสิร์ฟอาหารทั้งแห้งและน้ำ</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="product-badge">มาใหม่</div>
-                        <div class="product-placeholder">🥤</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>ถ้วยและแก้ว</h3>
-                        <p>ถ้วยสำหรับเครื่องดื่มร้อนและเย็น รองรับของเหลวได้ดีถึง 3 ชั่วโมง</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="product-placeholder">📦</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>กล่องอาหาร</h3>
-                        <p>กล่องใส่อาหารแบบมีฝาปิด เหมาะสำหรับอาหารกล่องและเทคเอาท์</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- NPD Introduction -->
     <section id="npd" class="section npd-section">
@@ -170,6 +246,27 @@
                 <div class="title-underline"></div>
                 <p class="section-description">ขั้นตอนการพัฒนาผลิตภัณฑ์ BanaWare 8 ขั้นตอน</p>
             </div>
+
+            <!-- NPD Complete Document Link -->
+            <div style="background: linear-gradient(135deg, #2d5016 0%, #6b8e23 100%); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                <div style="color: white; margin-bottom: 1.5rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📖</div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">เอกสาร New Product Development Process ฉบับเต็ม</h3>
+                    <p style="font-size: 1.1rem; opacity: 0.95; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+                        ดาวน์โหลดหรืออ่านเอกสารรายละเอียดทั้งหมดของกระบวนการพัฒนาผลิตภัณฑ์ BanaWare<br>
+                        ครบทั้ง 8 ขั้นตอน พร้อมข้อมูล วิเคราะห์ และตัวอย่างที่ครบถ้วน
+                    </p>
+                </div>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="idea-generation.html" class="btn" style="background: white; color: #2d5016; padding: 1rem 2rem; font-size: 1.1rem; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; font-weight: 600;">
+                        <span>📱</span> อ่านเวอร์ชั่น Online
+                    </a>
+                    <a href="#" onclick="alert('ฟีเจอร์ดาวน์โหลด PDF จะเปิดให้ใช้งานเร็วๆ นี้'); return false;" class="btn" style="background: rgba(255,255,255,0.2); color: white; padding: 1rem 2rem; font-size: 1.1rem; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; font-weight: 600; border: 2px solid white;">
+                        <span>📥</span> ดาวน์โหลด PDF
+                    </a>
+                </div>
+            </div>
+
             <div class="npd-grid">
                 <a href="idea-generation.html" class="npd-card">
                     <div class="npd-number">01</div>
@@ -224,12 +321,18 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta-section">
+    <section class="section cta-section" style="background-image: url('images/landingPage/cta-bg.jpg'); background-size: cover; background-position: center;">
         <div class="container">
             <div class="cta-content">
                 <h2>พร้อมที่จะเป็นส่วนหนึ่งของการเปลี่ยนแปลงแล้วหรือยัง?</h2>
-                <p>เริ่มต้นใช้งานตองโคม และร่วมสร้างโลกที่ยั่งยืนไปพร้อมกัน</p>
-                <a href="#npd" class="btn btn-light">เรียนรู้ New Product Cycle</a>
+                <p style="font-size: 1.2rem; margin: 1.5rem 0;">
+                    <strong>"Float Green Soul, Win Love Goal"</strong><br>
+                    เริ่มต้นใช้งาน BanaWare และร่วมสร้างโลกที่ยั่งยืนไปพร้อมกัน
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <a href="#product-summary" class="btn btn-light">ดูรายละเอียดผลิตภัณฑ์</a>
+                    <a href="#npd" class="btn btn-primary">เรียนรู้ New Product Cycle</a>
+                </div>
             </div>
         </div>
     </section>
