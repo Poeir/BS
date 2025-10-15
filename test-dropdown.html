@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Dropdown - BanaWare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🌿 BanaWare</h2>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="index.html#npd">NPD Cycle</a></li>
+                <li class="nav-dropdown">
+                    <a href="javascript:void(0)">8 ขั้นตอน</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="idea-generation.html">1. Idea Generation</a></li>
+                        <li><a href="idea-screening.html">2. Idea Screening</a></li>
+                        <li><a href="concept-development.html">3. Concept Development</a></li>
+                        <li><a href="marketing-strategy.html" class="active">4. Marketing Strategy</a></li>
+                        <li><a href="business-analysis.html">5. Business Analysis</a></li>
+                        <li><a href="product-development.html">6. Product Development</a></li>
+                        <li><a href="market-testing.html">7. Market Testing</a></li>
+                        <li><a href="commercialization.html">8. Commercialization</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div style="margin-top: 100px; padding: 2rem;">
+        <h1>Test Dropdown Navigation</h1>
+        <p>กด hamburger menu แล้วลองคลิก "8 ขั้นตอน" เพื่อดู dropdown</p>
+        
+        <div style="margin-top: 2rem; padding: 1rem; background: #f0f0f0; border-radius: 8px;">
+            <h3>วิธีทดสอบ:</h3>
+            <ol>
+                <li>หดหน้าจอให้เล็กกว่า 768px หรือใช้ Developer Tools</li>
+                <li>คลิกที่ hamburger menu (☰)</li>
+                <li>คลิกที่ "8 ขั้นตอน" เพื่อเปิด dropdown</li>
+                <li>ตรวจสอบว่า dropdown แสดงขึ้นมาหรือไม่</li>
+            </ol>
+        </div>
+        
+        <div style="margin-top: 2rem; padding: 1rem; background: #e8f5e9; border-radius: 8px;">
+            <h3>สิ่งที่ควรเห็น:</h3>
+            <ul>
+                <li>✅ Dropdown ขยายลงมาแสดงรายการ 8 ขั้นตอน</li>
+                <li>✅ Background สีเขียวอ่อน (rgba(107, 142, 35, 0.5))</li>
+                <li>✅ แต่ละขั้นตอนมี padding ซ้าย 3.5rem</li>
+                <li>✅ ลูกศรหมุน 180 องศาเมื่อเปิด dropdown</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Debug script
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdown = document.querySelector('.nav-dropdown');
+            const toggle = dropdown?.querySelector('a[href="javascript:void(0)"]');
+            const menu = dropdown?.querySelector('.dropdown-menu');
+            
+            console.log('Dropdown element:', dropdown);
+            console.log('Toggle button:', toggle);
+            console.log('Dropdown menu:', menu);
+            
+            if (toggle) {
+                toggle.addEventListener('click', () => {
+                    console.log('Toggle clicked!');
+                    console.log('Active class:', dropdown.classList.contains('active'));
+                    console.log('Menu max-height:', window.getComputedStyle(menu).maxHeight);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
