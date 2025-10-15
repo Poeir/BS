@@ -52,7 +52,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offset = 80; // Height of navbar
+            const offset = 100; // Height of navbar + extra space
             const targetPosition = target.offsetTop - offset;
             
             window.scrollTo({
