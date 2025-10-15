@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คณะผู้จัดทำ - BanaWare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="npd-pages.css">
+    <style>
+        /* Team Page Specific Styles */
+        .team-section {
+            padding: 4rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .team-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .team-intro h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-intro p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-avatar {
+            width: 100%;
+            height: 320px;
+            background: linear-gradient(135deg, #2d5016 0%, #6b8e23 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-avatar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+        }
+
+        .team-info {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .team-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            font-size: 1rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .team-id {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 1rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .team-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            padding: 0.4rem 0.8rem;
+            background: var(--bg-light);
+            color: var(--secondary-color);
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .team-stats {
+            background: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .team-avatar {
+                height: 280px;
+                font-size: 6rem;
+            }
+
+            .team-intro h2 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-avatar {
+                height: 240px;
+                font-size: 5rem;
+            }
+
+            .team-info {
+                padding: 1.5rem;
+            }
+
+            .team-name {
+                font-size: 1.3rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🌿 BanaWare</h2>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="index.html#npd">NPD Cycle</a></li>
+                <li class="nav-dropdown">
+                    <a href="javascript:void(0)">8 ขั้นตอน</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="idea-generation.html">1. Idea Generation</a></li>
+                        <li><a href="idea-screening.html">2. Idea Screening</a></li>
+                        <li><a href="concept-development.html">3. Concept Development</a></li>
+                        <li><a href="marketing-strategy.html">4. Marketing Strategy</a></li>
+                        <li><a href="business-analysis.html">5. Business Analysis</a></li>
+                        <li><a href="product-development.html">6. Product Development</a></li>
+                        <li><a href="market-testing.html">7. Market Testing</a></li>
+                        <li><a href="commercialization.html">8. Commercialization</a></li>
+                    </ul>
+                </li>
+                <li><a href="team.html" class="active">คณะผู้จัดทำ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">หน้าแรก</a>
+                <span>/</span>
+                <span>คณะผู้จัดทำ</span>
+            </div>
+            <h1 class="page-title">คณะผู้จัดทำ</h1>
+            <p class="page-subtitle">ทีมงานที่ร่วมพัฒนาโครงการ BanaWare</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <!-- Team Introduction -->
+            <div class="team-intro">
+                <h2>🌟 พบกับทีมของเรา</h2>
+                <p>เราคือกลุ่มนักศึกษาสาขาวิชาวิทยาการคอมพิวเตอร์ (CP-CS) ที่มีความมุ่งมั่นในการพัฒนาผลิตภัณฑ์ที่เป็นมิตรกับสิ่งแวดล้อม ด้วยความหลงใหลในนวัตกรรมและความยั่งยืน เราได้ร่วมกันสร้างสรรค์โครงการ BanaWare เพื่อช่วยลดปัญหาขยะพลาสติกและสนับสนุนเศรษฐกิจหมุนเวียน</p>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="team-grid">
+                <!-- Strategic & Market Research Team -->
+                <!-- Member 1 -->
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="images/team/phuri.jpg" alt="ภูริ ชาริชา" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='👨‍💼'">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">ภูริ ชาริชา</h3>
+                        <p class="team-role">Strategic & Market Research</p>
+                        <p class="team-id">663380228-3 | CP-CS</p>
+                        <p class="team-description">รับผิดชอบการวิจัยเชิงกลยุทธ์และตลาด วิเคราะห์แนวโน้มตลาด ศึกษาพฤติกรรมผู้บริโภค และพัฒนากลยุทธ์ทางธุรกิจ</p>
+                        <div class="team-skills">
+                            <span class="skill-tag">Market Research</span>
+                            <span class="skill-tag">Strategy</span>
+                            <span class="skill-tag">Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="images/team/withawin.jpg" alt="วิทวินธ์ บุญสมร" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='�‍🔬'">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">วิทวินธ์ บุญสมร</h3>
+                        <p class="team-role">Strategic & Market Research</p>
+                        <p class="team-id">663380230-8 | CP-CS</p>
+                        <p class="team-description">ดำเนินการวิจัยตลาดและคู่แข่ง รวบรวมและวิเคราะห์ข้อมูล จัดทำรายงานเชิงกลยุทธ์ เพื่อสนับสนุนการตัดสินใจ</p>
+                        <div class="team-skills">
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Research</span>
+                            <span class="skill-tag">Reporting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product & Business Development Team -->
+                <!-- Member 3 -->
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="images/team/tattiya.jpg" alt="ตติยา บุตรเฟื้อย" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='👩‍💼'">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">ตติยา บุตรเฟื้อย</h3>
+                        <p class="team-role">Product & Business Development</p>
+                        <p class="team-id">663380594-8 | CP-CS</p>
+                        <p class="team-description">รับผิดชอบการพัฒนาผลิตภัณฑ์และธุรกิจ ออกแบบ Concept ผลิตภัณฑ์ วิเคราะห์ความเป็นไปได้ทางธุรกิจ</p>
+                        <div class="team-skills">
+                            <span class="skill-tag">Product Development</span>
+                            <span class="skill-tag">Business Planning</span>
+                            <span class="skill-tag">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="images/team/phattarawadee.jpg" alt="ภัทราวดี ส่องศรีโรจน์" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='�‍�'">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">ภัทราวดี ส่องศรีโรจน์</h3>
+                        <p class="team-role">Product & Business Development</p>
+                        <p class="team-id">663380610-6 | CP-CS</p>
+                        <p class="team-description">พัฒนากลยุทธ์ธุรกิจ วางแผนการผลิต ออกแบบโมเดลธุรกิจ และประเมินผลตอบแทนการลงทุน</p>
+                        <div class="team-skills">
+                            <span class="skill-tag">Business Model</span>
+                            <span class="skill-tag">Planning</span>
+                            <span class="skill-tag">ROI Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="images/team/sujeeporn.jpg" alt="ศุจีภรณ์ ภูบาลชื่น" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='👩‍🎨'">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">ศุจีภรณ์ ภูบาลชื่น</h3>
+                        <p class="team-role">Product & Business Development</p>
+                        <p class="team-id">663380613-0 | CP-CS</p>
+                        <p class="team-description">ดูแลการพัฒนาผลิตภัณฑ์ ออกแบบ UI/UX สร้าง Prototype และพัฒนาเว็บไซต์นำเสนอโครงการ</p>
+                        <div class="team-skills">
+                            <span class="skill-tag">UI/UX Design</span>
+                            <span class="skill-tag">Web Development</span>
+                            <span class="skill-tag">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Market Testing & Commercialization Team -->
+                <!-- Member 6 -->
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="images/team/nuttapat.jpg" alt="ณัฐภัทร วรจินดา" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='👨‍💼'">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">ณัฐภัทร วรจินดา</h3>
+                        <p class="team-role">Market Testing & Commercialization</p>
+                        <p class="team-id">663380383-1 | CP-CS</p>
+                        <p class="team-description">รับผิดชอบการทดสอบตลาดและการเปิดตัวผลิตภัณฑ์ วางแผนการตลาด จัดการแคมเปญ และวิเคราะห์ผลตอบรับ</p>
+                        <div class="team-skills">
+                            <span class="skill-tag">Market Testing</span>
+                            <span class="skill-tag">Marketing</span>
+                            <span class="skill-tag">Campaign Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 7 -->
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="images/team/yanawit.jpg" alt="ญานวิทย์ พิชญกุลมงคล" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='�‍🚀'">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">ญานวิทย์ พิชญกุลมงคล</h3>
+                        <p class="team-role">Market Testing & Commercialization</p>
+                        <p class="team-id">663380379-2 | CP-CS</p>
+                        <p class="team-description">ดำเนินการทดสอบตลาด วิเคราะห์ผลการทดลอง วางแผนกลยุทธ์การเปิดตัว และบริหาร Social Media</p>
+                        <div class="team-skills">
+                            <span class="skill-tag">Testing</span>
+                            <span class="skill-tag">Launch Strategy</span>
+                            <span class="skill-tag">Social Media</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Stats -->
+            <div class="team-stats">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">สมาชิกในทีม</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">ขั้นตอน NPD</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">ความทุ่มเท</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">🌱</div>
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">ความยั่งยืน</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌿 BanaWare</h3>
+                    <p>ภาชนะอาหารจากกาบกล้วยธรรมชาติ<br>เพื่อโลกที่ยั่งยืน</p>
+                </div>
+                <div class="footer-section">
+                    <h4>เมนูหลัก</h4>
+                    <ul>
+                        <li><a href="index.html">หน้าแรก</a></li>
+                        <li><a href="index.html#npd">NPD Cycle</a></li>
+                        <li><a href="team.html">คณะผู้จัดทำ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>New Product Cycle</h4>
+                    <ul>
+                        <li><a href="idea-generation.html">Idea Generation</a></li>
+                        <li><a href="idea-screening.html">Idea Screening</a></li>
+                        <li><a href="concept-development.html">Concept Development</a></li>
+                        <li><a href="marketing-strategy.html">Marketing Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ขั้นตอนต่อไป</h4>
+                    <ul>
+                        <li><a href="business-analysis.html">Business Analysis</a></li>
+                        <li><a href="product-development.html">Product Development</a></li>
+                        <li><a href="market-testing.html">Market Testing</a></li>
+                        <li><a href="commercialization.html">Commercialization</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BanaWare - ภาชนะอาหารจากกาบกล้วยธรรมชาติ | จัดทำโดยทีมนักศึกษา</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
