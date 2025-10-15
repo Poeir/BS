@@ -235,4 +235,4 @@ scrollTopBtn.addEventListener('mouseleave', () => {
     scrollTopBtn.style.transform = 'scale(1)';
 });
 
-console.log('🌿 ตองโคม - Website Loaded Successfully!');
+    console.log('🌿 BanaWare - Website Loaded Successfully!');
