@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Analysis - ตองโคม</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="npd-pages.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo"><h2>🌿 ตองโคม</h2></div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="index.html#npd">New Product Cycle</a></li>
+                <li><a href="idea-generation.html">1. Idea Generation</a></li>
+                <li><a href="idea-screening.html">2. Idea Screening</a></li>
+                <li><a href="concept-development.html">3. Concept Development</a></li>
+                <li><a href="marketing-strategy.html">4. Marketing Strategy</a></li>
+                <li><a href="business-analysis.html" class="active">5. Business Analysis</a></li>
+                <li><a href="product-development.html">6. Product Development</a></li>
+                <li><a href="market-testing.html">7. Market Testing</a></li>
+                <li><a href="commercialization.html">8. Commercialization</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">หน้าแรก</a><span>/</span>
+                <a href="index.html#npd">New Product Cycle</a><span>/</span>
+                <span>Business Analysis</span>
+            </div>
+            <h1 class="page-title">Business Analysis</h1>
+            <p class="page-subtitle">ขั้นตอนที่ 5: ประเมินต้นทุน ยอดขาย ROI และความคุ้มค่า</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <div class="content-card">
+                        <h2>🎯 วัตถุประสงค์</h2>
+                        <p>ประเมินความเป็นไปได้ทางธุรกิจของผลิตภัณฑ์ วิเคราะห์ต้นทุน คาดการณ์รายได้ และวิเคราะห์ผลตอบแทนจากการลงทุน (ROI) เพื่อตัดสินใจว่าควรพัฒนาผลิตภัณฑ์ต่อไปหรือไม่</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h2>💰 การวิเคราะห์ต้นทุน</h2>
+                        
+                        <h3>ต้นทุนคงที่ (Fixed Costs)</h3>
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>รายการ</th>
+                                    <th style="text-align: right;">จำนวนเงิน (บาท/ปี)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ค่าเช่าพื้นที่ผลิต/สตูดิโอ</td>
+                                    <td style="text-align: right;">120,000</td>
+                                </tr>
+                                <tr>
+                                    <td>เงินเดือนพนักงานประจำ (3 คน)</td>
+                                    <td style="text-align: right;">540,000</td>
+                                </tr>
+                                <tr>
+                                    <td>ค่าไฟฟ้า น้ำประปา</td>
+                                    <td style="text-align: right;">48,000</td>
+                                </tr>
+                                <tr>
+                                    <td>อุปกรณ์และเครื่องมือ</td>
+                                    <td style="text-align: right;">80,000</td>
+                                </tr>
+                                <tr>
+                                    <td>ค่าใช้จ่ายด้านการตลาด</td>
+                                    <td style="text-align: right;">150,000</td>
+                                </tr>
+                                <tr>
+                                    <td>ค่าใช้จ่ายอื่นๆ</td>
+                                    <td style="text-align: right;">62,000</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background: var(--secondary-color); color: white; font-weight: bold;">
+                                    <td>รวมต้นทุนคงที่ต่อปี</td>
+                                    <td style="text-align: right;">1,000,000</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                        <h3>ต้นทุนผันแปร (Variable Costs per Unit)</h3>
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>รายการ</th>
+                                    <th>โคมตั้งโต๊ะ</th>
+                                    <th>โคมแขวน</th>
+                                    <th>โคมตั้งพื้น</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>วัสดุหลัก (ใบตอง)</td>
+                                    <td style="text-align: right;">80 บาท</td>
+                                    <td style="text-align: right;">150 บาท</td>
+                                    <td style="text-align: right;">300 บาท</td>
+                                </tr>
+                                <tr>
+                                    <td>อุปกรณ์ไฟ (LED, สายไฟ)</td>
+                                    <td style="text-align: right;">120 บาท</td>
+                                    <td style="text-align: right;">180 บาท</td>
+                                    <td style="text-align: right;">250 บาท</td>
+                                </tr>
+                                <tr>
+                                    <td>โครงสร้างและวัสดุเสริม</td>
+                                    <td style="text-align: right;">100 บาท</td>
+                                    <td style="text-align: right;">200 บาท</td>
+                                    <td style="text-align: right;">400 บาท</td>
+                                </tr>
+                                <tr>
+                                    <td>ค่าแรงผลิต</td>
+                                    <td style="text-align: right;">150 บาท</td>
+                                    <td style="text-align: right;">250 บาท</td>
+                                    <td style="text-align: right;">500 บาท</td>
+                                </tr>
+                                <tr>
+                                    <td>บรรจุภัณฑ์</td>
+                                    <td style="text-align: right;">50 บาท</td>
+                                    <td style="text-align: right;">70 บาท</td>
+                                    <td style="text-align: right;">100 บาท</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background: var(--secondary-color); color: white; font-weight: bold;">
+                                    <td>รวมต้นทุนต่อชิ้น</td>
+                                    <td style="text-align: right;">500 บาท</td>
+                                    <td style="text-align: right;">850 บาท</td>
+                                    <td style="text-align: right;">1,550 บาท</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <div class="content-card">
+                        <h2>📊 คาดการณ์รายได้ (ปีที่ 1)</h2>
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>ผลิตภัณฑ์</th>
+                                    <th style="text-align: center;">ราคาขาย</th>
+                                    <th style="text-align: center;">ยอดขายคาดการณ์</th>
+                                    <th style="text-align: right;">รายได้รวม</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>โคมตั้งโต๊ะ</td>
+                                    <td style="text-align: center;">1,200 บาท</td>
+                                    <td style="text-align: center;">800 ชิ้น</td>
+                                    <td style="text-align: right;">960,000 บาท</td>
+                                </tr>
+                                <tr>
+                                    <td>โคมแขวนเพดาน</td>
+                                    <td style="text-align: center;">2,500 บาท</td>
+                                    <td style="text-align: center;">600 ชิ้น</td>
+                                    <td style="text-align: right;">1,500,000 บาท</td>
+                                </tr>
+                                <tr>
+                                    <td>โคมตั้งพื้น</td>
+                                    <td style="text-align: center;">4,500 บาท</td>
+                                    <td style="text-align: center;">300 ชิ้น</td>
+                                    <td style="text-align: right;">1,350,000 บาท</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background: var(--secondary-color); color: white; font-weight: bold;">
+                                    <td colspan="3">รวมรายได้ปีที่ 1</td>
+                                    <td style="text-align: right;">3,810,000 บาท</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <div class="content-card">
+                        <h2>💵 งบกำไรขาดทุน (Income Statement - ปีที่ 1)</h2>
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>รายการ</th>
+                                    <th style="text-align: right;">จำนวนเงิน (บาท)</th>
+                                    <th style="text-align: right;">%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background: #e8f5e9;">
+                                    <td><strong>รายได้จากการขาย</strong></td>
+                                    <td style="text-align: right;"><strong>3,810,000</strong></td>
+                                    <td style="text-align: right;">100%</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"></td>
+                                </tr>
+                                <tr>
+                                    <td>ต้นทุนขาย (Variable Costs)</td>
+                                    <td style="text-align: right;">1,320,000</td>
+                                    <td style="text-align: right;">34.6%</td>
+                                </tr>
+                                <tr style="background: #fff3cd;">
+                                    <td><strong>กำไรขั้นต้น (Gross Profit)</strong></td>
+                                    <td style="text-align: right;"><strong>2,490,000</strong></td>
+                                    <td style="text-align: right;"><strong>65.4%</strong></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"></td>
+                                </tr>
+                                <tr>
+                                    <td>ค่าใช้จ่ายในการดำเนินงาน (Fixed Costs)</td>
+                                    <td style="text-align: right;">1,000,000</td>
+                                    <td style="text-align: right;">26.2%</td>
+                                </tr>
+                                <tr>
+                                    <td>ค่าใช้จ่ายด้านการตลาดเพิ่มเติม</td>
+                                    <td style="text-align: right;">200,000</td>
+                                    <td style="text-align: right;">5.2%</td>
+                                </tr>
+                                <tr>
+                                    <td>ค่าใช้จ่ายอื่นๆ</td>
+                                    <td style="text-align: right;">100,000</td>
+                                    <td style="text-align: right;">2.6%</td>
+                                </tr>
+                                <tr style="background: #d4edda;">
+                                    <td><strong>กำไรสุทธิ (Net Profit)</strong></td>
+                                    <td style="text-align: right;"><strong>1,190,000</strong></td>
+                                    <td style="text-align: right;"><strong>31.2%</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-card">
+                        <h2>📈 การวิเคราะห์ ROI และ Break-Even</h2>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-value">31.2%</div>
+                                <div class="stat-label">Net Profit Margin</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">65.4%</div>
+                                <div class="stat-label">Gross Profit Margin</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">1.19M</div>
+                                <div class="stat-label">กำไรสุทธิปีที่ 1 (บาท)</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">2 ปี</div>
+                                <div class="stat-label">ระยะเวลาคืนทุน</div>
+                            </div>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h3>การคำนวณ Break-Even Point</h3>
+                            <p><strong>จุดคุ้มทุน (ยอดขาย):</strong></p>
+                            <p>= ต้นทุนคงที่ / (ราคาขายเฉลี่ย - ต้นทุนผันแปรเฉลี่ย)</p>
+                            <p>= 1,200,000 / (2,245 - 777)</p>
+                            <p>= 1,200,000 / 1,468</p>
+                            <p><strong>= ประมาณ 817 ชิ้น</strong></p>
+                            <br>
+                            <p>คาดว่าจะถึงจุดคุ้มทุนในเดือนที่ 6-7</p>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h2>📊 คาดการณ์ 3 ปี</h2>
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>รายการ</th>
+                                    <th style="text-align: right;">ปีที่ 1</th>
+                                    <th style="text-align: right;">ปีที่ 2</th>
+                                    <th style="text-align: right;">ปีที่ 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>รายได้รวม</td>
+                                    <td style="text-align: right;">3.81M</td>
+                                    <td style="text-align: right;">5.34M</td>
+                                    <td style="text-align: right;">6.95M</td>
+                                </tr>
+                                <tr>
+                                    <td>กำไรขั้นต้น</td>
+                                    <td style="text-align: right;">2.49M</td>
+                                    <td style="text-align: right;">3.49M</td>
+                                    <td style="text-align: right;">4.54M</td>
+                                </tr>
+                                <tr>
+                                    <td>กำไรสุทธิ</td>
+                                    <td style="text-align: right;">1.19M</td>
+                                    <td style="text-align: right;">1.95M</td>
+                                    <td style="text-align: right;">2.77M</td>
+                                </tr>
+                                <tr>
+                                    <td>% การเติบโต</td>
+                                    <td style="text-align: right;">-</td>
+                                    <td style="text-align: right;">+40%</td>
+                                    <td style="text-align: right;">+30%</td>
+                                </tr>
+                                <tr>
+                                    <td>ROI สะสม</td>
+                                    <td style="text-align: right;">59.5%</td>
+                                    <td style="text-align: right;">157%</td>
+                                    <td style="text-align: right;">296%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-card">
+                        <h2>⚖️ การวิเคราะห์ความเสี่ยง</h2>
+                        <div class="comparison-grid">
+                            <div class="info-box warning">
+                                <h4>ความเสี่ยงด้านตลาด</h4>
+                                <ul>
+                                    <li>ความต้องการอาจต่ำกว่าคาดการณ์</li>
+                                    <li><strong>แผนรองรับ:</strong> ขยายช่องทางขาย B2B</li>
+                                </ul>
+                            </div>
+                            <div class="info-box warning">
+                                <h4>ความเสี่ยงด้านการผลิต</h4>
+                                <ul>
+                                    <li>วัตถุดิบอาจขาดแคลนตามฤดูกาล</li>
+                                    <li><strong>แผนรองรับ:</strong> สต็อกวัตถุดิบล่วงหน้า</li>
+                                </ul>
+                            </div>
+                            <div class="info-box warning">
+                                <h4>ความเสี่ยงด้านคู่แข่ง</h4>
+                                <ul>
+                                    <li>คู่แข่งอาจลอกเลียนแบบ</li>
+                                    <li><strong>แผนรองรับ:</strong> สร้างแบรนด์ที่แข็งแกร่ง</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h2>✅ สรุปผลการวิเคราะห์</h2>
+                        <div class="info-box success">
+                            <h3>คำตัดสิน: เห็นชอบให้ดำเนินการต่อ ✓</h3>
+                            <ul>
+                                <li>✅ ROI ปีที่ 1 อยู่ที่ 59.5% ถือว่าดีมาก</li>
+                                <li>✅ กำไรสุทธิ 31.2% สูงกว่าเกณฑ์ที่กำหนด (20%)</li>
+                                <li>✅ จุดคุ้มทุนอยู่ที่ปีที่ 1.7 ถือว่าเร็ว</li>
+                                <li>✅ แนวโน้มการเติบโตในปีต่อไปดี</li>
+                                <li>✅ ความเสี่ยงอยู่ในระดับที่ยอมรับได้</li>
+                            </ul>
+                            <br>
+                            <p><strong>ขั้นตอนต่อไป:</strong> พัฒนาผลิตภัณฑ์ (Prototype, Branding, Packaging)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="sidebar-card progress-card">
+                        <h3>ความคืบหน้า</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 62.5%;"></div>
+                        </div>
+                        <p class="progress-text">ขั้นตอน 5 จาก 8 (62.5%)</p>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>New Product Cycle</h3>
+                        <ul class="npd-list">
+                            <li><a href="idea-generation.html"><span class="step-number">01</span><span>Idea Generation</span></a></li>
+                            <li><a href="idea-screening.html"><span class="step-number">02</span><span>Idea Screening</span></a></li>
+                            <li><a href="concept-development.html"><span class="step-number">03</span><span>Concept Development</span></a></li>
+                            <li><a href="marketing-strategy.html"><span class="step-number">04</span><span>Marketing Strategy</span></a></li>
+                            <li class="active"><span class="step-number">05</span><span>Business Analysis</span></li>
+                            <li><a href="product-development.html"><span class="step-number">06</span><span>Product Development</span></a></li>
+                            <li><a href="market-testing.html"><span class="step-number">07</span><span>Market Testing</span></a></li>
+                            <li><a href="commercialization.html"><span class="step-number">08</span><span>Commercialization</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card key-points">
+                        <h3>Key Points</h3>
+                        <ul>
+                            <li>💰 กำไรสุทธิ 31.2%</li>
+                            <li>📈 ROI 59.5% ปีที่ 1</li>
+                            <li>🎯 คุ้มทุนปีที่ 1.7</li>
+                            <li>✅ เห็นชอบดำเนินการ</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="page-navigation">
+                <a href="marketing-strategy.html" class="nav-btn prev-btn">
+                    <span>←</span>
+                    <div><small>ก่อนหน้า</small><strong>Marketing Strategy</strong></div>
+                </a>
+                <a href="product-development.html" class="nav-btn next-btn">
+                    <div><small>ถัดไป</small><strong>Product Development</strong></div>
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌿 ตองโคม</h3>
+                    <p>โคมไฟธรรมชาติจากใบตอง<br>เพื่อโลกที่ยั่งยืน</p>
+                </div>
+                <div class="footer-section">
+                    <h4>New Product Cycle</h4>
+                    <ul>
+                        <li><a href="idea-generation.html">Idea Generation</a></li>
+                        <li><a href="idea-screening.html">Idea Screening</a></li>
+                        <li><a href="concept-development.html">Concept Development</a></li>
+                        <li><a href="marketing-strategy.html">Marketing Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ขั้นตอนต่อไป</h4>
+                    <ul>
+                        <li><a href="business-analysis.html">Business Analysis</a></li>
+                        <li><a href="product-development.html">Product Development</a></li>
+                        <li><a href="market-testing.html">Market Testing</a></li>
+                        <li><a href="commercialization.html">Commercialization</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ตองโคม - โคมไฟจากใบตองธรรมชาติ | สร้างด้วยความใส่ใจต่อสิ่งแวดล้อม</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
